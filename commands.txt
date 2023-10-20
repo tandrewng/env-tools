@@ -1,0 +1,4 @@
+#builds docker env based off dockerfile
+docker build -t torch-devel .
+#runs container with folder in /app/ working dir
+docker run --rm -it --gpus all -p 8888:8888 -v ~/Projects/fastai-ch3:/app/ torch-devel
